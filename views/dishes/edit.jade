@@ -1,0 +1,16 @@
+extends ../layout
+block content
+  center
+    h1= dish.student
+  form(method='POST' name='edit-dish' action='/dishes/#{dish._id}?_method=PUT')
+    div
+      div.form-group
+        label Student:
+        input.form-control(type='text' name='student' placeholder='Student Name' value='#{dish.student}') 
+      div.form-group
+        label Dish Description:
+        textarea.form-control(name='description' placeholder='description of dish..' value='')= dish.description   
+      div.form-group
+        a.btn.btn-default(href='/') Back to home
+        &nbsp;&nbsp;
+        button.btn.btn-primary(type='submit') Update Dish

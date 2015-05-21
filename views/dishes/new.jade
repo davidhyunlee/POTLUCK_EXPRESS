@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  center
+    h1= description
+  div
+    form(name='add-dish' method='POST' action='/dishes')
+      div.form-group
+        label Student:
+        input.form-control(type='text' placeholder='Student' name='student')
+      div.form-group  
+        label Description:
+        textarea.form-control(placeholder='Describe the dish you\'re bringing.' name='description')
+      div.form-group
+        center
+          button.btn.btn-primary(type='submit') Add Dish
+
+  a(href='/') Back to home

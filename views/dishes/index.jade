@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    div
+      center
+        h1 POTLUCK!
+      center
+        h3 Dishes List
+        br
+      ul
+        each dish in dishes
+          div.panel.panel-default
+            div.panel-heading
+              h3.panel-title
+                a(href='/dishes/#{dish._id}')= dish.student
+            div.panel-body
+              p= dish.description
+            div.panel-footer
+              p= dish.createdAt
+      center
+        a.btn.btn-default(href='dishes/new') Create a new Dish.

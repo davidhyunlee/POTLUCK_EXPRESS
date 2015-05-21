@@ -1,0 +1,15 @@
+extends ../layout
+block content
+  center
+    h1= dish.student
+  div.panel.panel-default
+    div.panel-body
+      p= description
+  ul
+    form.form-inline(method='POST' action='/dishes/#{dish._id}?_method=DELETE')
+      a.btn.btn-primary(href='/') Back to home
+      &nbsp;&nbsp;
+      a.btn.btn-default(href='/dishes/#{dish._id}/edit') Edit this Dish
+      &nbsp;&nbsp;
+      button.btn.btn-danger(type='submit') Delete Dish
+
