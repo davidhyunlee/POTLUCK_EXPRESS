@@ -12,6 +12,7 @@ block content
           div.panel.panel-default
             div.panel-heading
               h3.panel-title
+                a(href='/dishes/#{dish._id}') &gt; 
                 a(href='/dishes/#{dish._id}')= dish.student
             div.panel-body
               p= dish.description
